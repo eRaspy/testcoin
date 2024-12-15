@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style> 
+    body {
+        font-family: "Arial", sans-serif;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background: radial-gradient(circle, #202020, #000000);
+    
+    }
+    
+    .loading-text {
+      width: 1000px; 
+        height: 50px;
+        font-size: 24px;
+        color: #fff;
+        text-align: center;
+    }
+ #buttonc {
+        width: 92px; 
+        height: 120px; 
+        position: fixed;
+        top: 620px;
+        left: 20px;
+    }
+    #buttonf {
+        width: 92px; 
+        height: 120px; 
+        position: fixed;
+        top: 622px;
+        left: 85px;
+    }
+  #buttonta {
+        width: 92px; 
+        height: 120px; 
+        position: fixed;
+        top: 622px;
+        left: 150px;
+    }
+    #buttonb {
+        width: 92px; 
+        height: 120px; 
+        position: fixed;
+        top: 622px;
+        left: 215px;
+    }
+    #buttont {
+        width: 92px; 
+        height: 120px; 
+        position: fixed;
+        top: 620px;
+        left: 280px;
+    }
+    </style>
+    <title>Trollcoin</title>
+</head>
+<body>
+
+    <a href="clans.html">
+        <img id="buttonc" src="clansn.png" alt="Кнопка">
+    </a>
+
+    <a href="friends.html">
+        <img id="buttonf" src="friends.png" alt="Кнопка">
+    </a>
+  
+  <a href="main.html">
+       <img id="buttonta" src="tap.png" alt="Кнопка">
+    </a>
+
+    <a href="boosts.html">
+       <img id="buttonb" src="boosts.png" alt="Кнопка">
+    </a>
+
+    <a href="tasks.html">
+<img id="buttont" src="tasks.png" alt="Кнопка">
+    </a>
+  
+    <div class="loading-text" id="loading-text">Clans in progress</div>
+    
+    <script>
+        let text = document.getElementById("loading-text");
+        let dots = "";
+        let interval = setInterval(() => {
+            dots += ".";
+            text.textContent = "Clans in progress" + dots;
+            if (dots.length === 3) {
+                dots = ""; 
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

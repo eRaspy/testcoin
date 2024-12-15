@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style> 
+    body {
+    font-family: "Arial", sans-serif;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background: radial-gradient(circle, #202020, #000000);
+    }
+     #counter {
+            position: fixed;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 60px;
+            color: white;
+        }
+        #cimg {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            top: 52px;
+            left: 55%;
+        }
+  #text{
+    width: 400px;
+    height: 70px;
+    position: fixed;
+    color: white;
+    font-size: 30px;
+    top: 100px;
+    left: 12px;
+  }
+  #follow{
+    width: 400px;
+    height: 70px;
+    position: fixed;
+    top: 170px;
+  }
+  #tele{
+    width: 400px;
+    height: 750px;
+    position: fixed;
+    top: 20px;
+    }
+  #tele{
+    width: 400px;
+    height: 750px;
+    position: fixed;
+    top: 20px;
+    }
+  #twit{
+    width: 400px;
+    height: 750px;
+    position: fixed;
+    top: 20px;
+  }
+   #fchat{
+    width: 400px;
+    height: 70px;
+    position: fixed;
+    top: 240px;
+  }
+   #xtrol{
+    width: 400px;
+    height: 70px;
+    position: fixed;
+    top: 310px;
+  }
+         #buttonc {
+        width: 92px; 
+        height: 120px; 
+        position: fixed;
+        top: 620px;
+        left: 20px;
+    }
+    #buttonf {
+        width: 92px; 
+        height: 120px; 
+        position: fixed;
+        top: 622px;
+        left: 85px;
+    }
+  #buttonta {
+        width: 92px; 
+        height: 120px; 
+        position: fixed;
+        top: 622px;
+        left: 150px;
+    }
+    #buttonb {
+        width: 92px; 
+        height: 120px; 
+        position: fixed;
+        top: 622px;
+        left: 215px;
+    }
+    #buttont {
+        width: 92px; 
+        height: 120px; 
+        position: fixed;
+        top: 620px;
+        left: 280px;
+    }
+   #check{
+    width: 400px;
+    height: w00px;
+    position: fixed;
+    top: 30px;
+     right: 0px;
+   }
+   #checkt{
+    width: 400px;
+    height: w00px;
+    position: fixed;
+    top: 30px;
+     right: 0px;
+   }
+   #checkt1{
+    width: 400px;
+    height: w00px;
+    position: fixed;
+    top: 30px;
+     right: 0px;
+   }
+   #claim{
+    width: 400px;
+    height: w00px;
+    position: fixed;
+    top: 30px;
+  }
+    </style>
+    <title>Trollcoin</title>
+</head>
+<body>
+  <p id = "text">Our community</p>
+  <img id="follow" src="follow.png" alt="Кнопка" onclick="showTele()">
+  <img id="xtrol" src="xtrol.png" alt="Кнопка" onclick="showTwit()">
+  <img id="fchat" src="fchat.png" alt="Кнопка" onclick="showTele2()">
+
+  <img id="tele" src="telega.png" alt="Кнопка" style="display: none;">
+  <img id="twit" src="twit.png" alt="Кнопка" style="display: none;">
+  <img id="claim" src="claim.png" alt="Кнопка" style="display: none;">
+ 
+  
+   <a href="https://t.me/TheTrollcoin" 
+	target="_blank">
+        <img id="check" src="butt.png" alt="Кнопка" style="display: none;" onclick="handleClick3()">
+     
+    </a>
+  
+  <a href="http://t.me" 
+	target="_blank">
+        <img id="checkt" src="butt.png" alt="Кнопка" style="display: none;" onclick="handleClick2()">
+     
+    </a>
+  
+  <a href="https://x.com/thetrollcoin" 
+	target="_blank">
+        <img id="checkt1" src="butt.png" alt="Кнопка" style="display: none;" onclick="handleClick1()">
+     
+    </a>
+  
+    <a href="clans.html">
+        <img id="buttonc" src="clans.jpg" alt="Кнопка">
+    </a>
+
+    <a href="friends.html">
+        <img id="buttonf" src="friends.png" alt="Кнопка">
+    </a>
+  
+  <a href="main.html">
+       <img id="buttonta" src="tap.png" alt="Кнопка">
+    </a>
+
+    <a href="boosts.html">
+       <img id="buttonb" src="boosts.png" alt="Кнопка">
+    </a>
+
+    <a href="tasks.html">
+<img id="buttont" src="tasksn.png" alt="Кнопка">
+    </a>
+    
+  <p id="counter">0</p>
+  <img id="cimg" src="coin.png" alt="Кнопка">
+  <script>
+  let count = 0;
+let imageIndex = 0;
+const images = ["claim.png"];
+
+function handleClick1() {
+  count++;
+  if (count === 2) {
+    imageIndex = (imageIndex + 1) % images.length;
+    document.getElementById("check").src = images[imageIndex];
+  } else if (count === 3) {
+    document.getElementById("check").style.visibility = "hidden";
+    document.getElementById("tele").style.visibility = "hidden";
+    document.getElementById("counter").innerHTML = `${5000}`;
+  } else if (count > 3) {
+    document.getElementById("counter").innerHTML = `${count * 5000}`;
+  }
+}
+  
+  function showTele() {
+      document.getElementById("tele").style.display = "block";
+      document.getElementById("check").style.display = "block";
+    }
+  
+  
+  function handleClick2() {
+  count++;
+  if (count === 2) {
+    imageIndex = (imageIndex + 1) % images.length;
+    document.getElementById("checkt").src = images[imageIndex];
+  } else if (count === 3) {
+    document.getElementById("checkt").style.visibility = "hidden";
+    document.getElementById("tele").style.visibility = "hidden";
+    document.getElementById("counter").innerHTML = `${5000}`;
+  } else if (count > 3) {
+    document.getElementById("counter").innerHTML = `${count * 5000}`;
+  }
+}
+  
+  function showTele2() {
+  document.getElementById("tele").style.display = "block";
+  document.getElementById("checkt").style.display = "block";
+}
+ 
+  
+  function handleClick3() {
+  count++;
+  if (count === 2) {
+    imageIndex = (imageIndex + 1) % images.length;
+    document.getElementById("checkt1").src = images[imageIndex];
+  } else if (count === 3) {
+    document.getElementById("checkt2").style.visibility = "hidden";
+    document.getElementById("twit").style.visibility = "hidden";
+    document.getElementById("counter").innerHTML = `${5000}`;
+  } else if (count > 3) {
+    document.getElementById("counter").innerHTML = `${count * 5000}`;
+  }
+}
+  
+  
+  
+  function showTwit() {
+      document.getElementById("twit").style.display = "block";
+      document.getElementById("checkt1").style.display = "block";
+    }
+  
+  
+  </script>
+</body>
+</html>

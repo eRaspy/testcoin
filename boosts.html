@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style> 
+    body {
+    font-family: "Arial", sans-serif;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background: radial-gradient(circle, #202020, #000000);
+    }
+      #counter {
+            position: fixed;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 60px;
+            color: white;
+        }
+        #cimg {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            top: 52px;
+            left: 55%;
+        }
+         #buttonc {
+        width: 92px; 
+        height: 120px; 
+        position: fixed;
+        top: 620px;
+        left: 20px;
+    }
+    #buttonf {
+        width: 92px; 
+        height: 120px; 
+        position: fixed;
+        top: 622px;
+        left: 85px;
+    }
+  #buttonta {
+        width: 92px; 
+        height: 120px; 
+        position: fixed;
+        top: 622px;
+        left: 150px;
+    }
+    #buttonb {
+        width: 92px; 
+        height: 120px; 
+        position: fixed;
+        top: 622px;
+        left: 215px;
+    }
+    #buttont {
+        width: 92px; 
+        height: 120px; 
+        position: fixed;
+        top: 620px;
+        left: 280px;
+    }
+  #beast {
+    width: 200px;
+    height: 70px;
+    position: fixed;
+    top: 140px;
+    left: 1%;
+  }
+  #full {
+    width: 200px;
+    height: 70px;
+    position: fixed;
+    top: 140px;
+    left: 46%;
+  }
+    #multi{
+    width: 400px;
+    height: 70px;
+    position: fixed;
+    top: 210px;
+  }
+  #limit{
+    width: 400px;
+    height: 70px;
+    position: fixed;
+    top: 280px;
+  }
+  #speed{
+    width: 400px;
+    height: 70px;
+    position: fixed;
+    top: 350px;
+  }
+  #tapbot{
+    width: 400px;
+    height: 70px;
+    position: fixed;
+    top: 420px;
+  }
+  #full3{
+    width: 400px;
+    height: 70px;
+    position: fixed;
+    color: white;
+    font-size: 15px;
+    top: 168px;
+    left: 273px;
+  }
+  #beast3{
+    width: 400px;
+    height: 70px;
+    position: fixed;
+    color: white;
+    font-size: 15px;
+      top: 168px;
+    left: 105px;
+  }
+  #costM{
+    width: 400px;
+    height: 70px;
+    position: fixed;
+    color: white;
+    font-size: 20px;
+    top: 224px;
+    left: 93px;
+  }
+  #costL{
+    width: 400px;
+    height: 70px;
+    position: fixed;
+    color: white;
+    font-size: 20px;
+     top: 294px;
+    left: 94px;
+  }
+  #costS{
+    width: 400px;
+    height: 70px;
+    position: fixed;
+    color: white;
+    font-size: 20px;
+     top: 364px;
+    left: 94px;
+  }
+  #costT{
+    width: 400px;
+    height: 70px;
+    position: fixed;
+    color: white;
+    font-size: 20px;
+        top: 434px;
+    left: 94px;
+  }
+  #levelM{
+    width: 400px;
+    height: 70px;
+    position: fixed;
+    color: white;
+    font-size: 20px;
+    top: 224px;
+    left: 133px; }
+  
+  #levelL{
+    width: 400px;
+    height: 70px;
+    position: fixed;
+    color: white;
+  font-size: 20px;
+   top: 294px;
+    left: 133px;
+  }
+    #levelS{
+    width: 400px;
+    height: 70px;
+    position: fixed;
+    color: white;
+font-size: 20px;
+        top: 364px;
+    left: 143px;
+  }
+    </style>
+    <title>Trollcoin</title>
+</head>
+<body>
+
+    <a href="clans.html">
+        <img id="buttonc" src="clans.jpg" alt="Кнопка">
+    </a>
+
+    <a href="friends.html">
+        <img id="buttonf" src="friends.png" alt="Кнопка">
+    </a>
+  
+  <a href="main.html">
+       <img id="buttonta" src="tap.png" alt="Кнопка">
+    </a>
+
+    <a href="boosts.html">
+       <img id="buttonb" src="boostsn.png" alt="Кнопка">
+    </a>
+
+    <a href="tasks.html">
+<img id="buttont" src="tasks.png" alt="Кнопка">
+    </a>
+  
+  <img id="beast" src="beast.jpg" alt="Кнопка">
+  <img id="full" src="full.jpg" alt="Кнопка">
+  <img id="multi" src="multi.png" alt="Кнопка">
+  <img id="limit" src="limit.png" alt="Кнопка">
+  <img id="speed" src="speed.png" alt="Кнопка">
+  <img id="tapbot" src="tapbot.png" alt="Кнопка">
+  
+  <p id="counter">0</p>
+  <img id="cimg" src="coin.png" alt="Кнопка">
+  
+  
+  <p id = "full3">3/3</p>
+  <p id = "beast3">3/3</p>
+  <p id = "costM">100</p>
+  <p id = "costL">100</p>
+  <p id = "costS">1000</p>
+  <p id = "costT">20000</p>
+  <p id = "levelM"> | Level 0</p>
+  <p id = "levelL"> | Level 0</p>
+  <p id = "levelS"> | Level 0</p>
+  
+  
+  <script>
+  let count = 400000;
+let energy = 500
+let levelM = 0;
+let costM = 100;
+let tapbotPurchased = false;
+
+document.getElementById("tapbot").addEventListener("click", function() {
+  if (count >= 200000 && !tapbotPurchased) {
+    count -= 200000;
+    document.getElementById("counter").innerHTML = count;
+    
+    // start passive income
+    setInterval(function() {
+      count += 5;
+      document.getElementById("counter").innerHTML = count;
+    }, 1000); // every 1000ms (1 second)
+    
+    // disable tapbot button
+    tapbotPurchased = true;
+    this.disabled = true;
+    this.style.opacity = 0.5;
+    
+    // make costT transparent 50%
+    document.getElementById("costT").style.opacity = 0.5;
+  } else if (count < 200000) {
+    
+  }
+});
+
+  document.getElementById("multi").addEventListener("click", function() {
+    if (count >= 100) {
+      count -= 100;
+      document.getElementById("counter").innerHTML = count;
+      costM *= 2;
+      document.getElementById("costM").innerHTML = costM;
+
+      // Move levelM to the left by 20px when costM exceeds 999
+      if (costM > 999) {
+        document.getElementById("levelM").style.marginLeft = "+10px";
+      }
+      if (costM > 9999) {
+        document.getElementById("levelM").style.marginLeft = "+20px";
+      }
+      if (costM > 99999) {
+        document.getElementById("levelM").style.marginLeft = "+30px";
+      }
+            if (costM > 999999) {
+        document.getElementById("levelM").style.marginLeft = "+40px";
+      }
+      if (costM > 9999999) {
+        document.getElementById("levelM").style.marginLeft = "+55px";
+      }
+
+      
+      levelM++;
+      document.getElementById("levelM").innerHTML = ` | Level ${levelM}`;
+
+      // update click increment
+      document.getElementById("cimg").addEventListener("click", function() {
+        count += 2;
+        document.getElementById("counter").innerHTML = count;
+      });
+    }
+  });
+
+// format counter text
+if (count >= 1000) {
+  let thousands = Math.floor(count / 1000);
+  let hundreds = Math.floor((count % 1000) / 100);
+  let tens = Math.floor((count % 100) / 10);
+  
+  counterText = thousands + '.' + hundreds + tens + 'K';
+}
+document.getElementById("counter").innerText = counterText;
+
+const cimg = document.getElementById('cimg');
+if (count > 9) {
+  cimg.style.left = '60%';
+}
+if (count > 99) {
+  cimg.style.left = '63%';
+}
+if (count > 999) {
+  cimg.style.left = '71%';
+}
+if (count > 999) {
+  cimg.style.left = '73%';
+}
+  </script>
+</body>
+</html>
